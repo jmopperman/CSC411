@@ -1,2 +1,2 @@
-# CSC411
-Implementation of Identification techniques
+# Comparison Of Identification Techniques
+A number of common identification techniques are being implemented on various systems and analysed in terms on their robustness and speed. Robustness is the measure of the identification model's sensitivity to variations in inputs and process uncertainties. Currently, the TClab is used to generate input and output data. So far, the ARX and ARMAX models have been implemented.
