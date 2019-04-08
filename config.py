@@ -3,4 +3,5 @@ import pathlib
 
 config = configparser.ConfigParser()
 config.read('config.ini')
-datadir = pathlib.Path(config['paths']['datadir']).expanduser()
+input_datadir = pathlib.Path(config['paths']['input_datadir']).expanduser()
+result_datadir = pathlib.Path(config['paths']['result_datadir']).expanduser()
