@@ -3,6 +3,7 @@ import numpy as np
 import timeit
 from random import gauss
 
+
 def add_noise(ydata, sigma):
     sig = np.linspace(0,sigma,10)  # specifying sigma determines the range 
                                     # of noise to be invesitgated, with 10 variations each time.
@@ -72,3 +73,27 @@ def DE_rt_coeffs(bounds, ydata, udata, m, n):
     runtime = end - start
        
     return runtime, coeff
+
+def MIN_rt_coeffs(ig, ydata, udata, m, n, met=None): #ig = initial guess and met=method
+    OF = OF_gen(ydata, udata, m, n)        
+    
+    start = timeit.default_timer()
+    coeff = scipy.optimize.minimize(OF, ig, method=met).x
+    end = timeit.default_timer()
+    
+    runtime = end - start
+       
+    return runtime, coeff
+
+def LSTSQ_rt_coeffs(ig, ydata, udata, m, n): #ig = initial guess and met=method
+    OF = OF_gen(ydata, udata, m, n)        
+    
+    start = timeit.default_timer()
+    coeff = scipy.optimize.least_squares(OF, ig).x
+    end = timeit.default_timer()
+    
+    runtime = end - start
+       
+    return runtime, coeff
+
+
