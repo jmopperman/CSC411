@@ -43,7 +43,7 @@ def OF_gen(ydata, udata, m, n):
 
 def simulate(coefficients, Uinput, m, n):
     udev = Uinput - Uinput[0]
-    A, B = coefficients[1:m+1], coefficients[m+1:]
+    A, B = coefficients[:m], coefficients[m:]
     Youtput = []
     for i in range(len(udev)):
         if i < len(B):
