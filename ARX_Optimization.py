@@ -97,5 +97,6 @@ def LSTSQ_rt_coeffs(ig, ydata, udata, m, n): #ig = initial guess and met=method
     return runtime, coeff
 
 ID_techs= [DE_rt_coeffs, MIN_rt_coeffs, LSTSQ_rt_coeffs]
+ID_tech_names = ['DE_rt_coeffs', 'MIN_rt_coeffs', 'LSTSQ_rt_coeffs']
 
 
