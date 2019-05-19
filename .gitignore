@@ -1,5 +1,7 @@
 CSC_shared_drive
 config.ini
+config_test.ini
+config_test.py
 Fast_file_editing.ipynb
 Joblib.ipynb
 Pathlib.ipynb
